@@ -1,0 +1,2 @@
+discord.com
+gmail.com
