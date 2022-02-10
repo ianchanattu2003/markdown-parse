@@ -24,7 +24,6 @@ public class MarkdownParse {
                     // System.out.println(currentIndex);
                 }
                 currentIndex = closeParen + 1;
-
             }
         }
         // System.out.println(currentIndex);
