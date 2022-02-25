@@ -50,8 +50,9 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         // Expected output
         ArrayList<String> expectedoutput = new ArrayList<>();
-        expectedoutput.add("url.com");
         expectedoutput.add("google.com");
+        expectedoutput.add("google.com");
+        expectedoutput.add("ucsd.edu");
         assertEquals(links, expectedoutput);
 
     }
@@ -63,7 +64,7 @@ public class MarkdownParseTest {
         // Expected output
         ArrayList<String> expectedoutput = new ArrayList<>();
         expectedoutput.add("a.com");
-        expectedoutput.add("a.com");
+        expectedoutput.add("a.com(())");
         expectedoutput.add("example.com");
         assertEquals(links, expectedoutput);
 
@@ -75,9 +76,7 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         // Expected output
         ArrayList<String> expectedoutput = new ArrayList<>();
-        expectedoutput.add("https://www.twitter.com");
         expectedoutput.add("https://ucsd-cse15l-w22.github.io/");
-        expectedoutput.add("https://cse.ucsd.edu/");
         assertEquals(links, expectedoutput);
 
     }
